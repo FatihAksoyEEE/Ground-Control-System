@@ -1,0 +1,101 @@
+:root {
+  /* Renk Paleti - Koyu ve Futuristik */
+  --bg-dark: #0a0a12;
+  --bg-panel: rgba(20, 20, 30, 0.6);
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+
+  --primary-color: #00f3ff; /* Neon Cyan */
+  --secondary-color: #ff0055; /* Neon Red */
+  --accent-color: #ffe600; /* Neon Yellow */
+  --success-color: #00ff66; /* Neon Green */
+  --warning-color: #ffaa00;
+  --danger-color: #ff0033;
+
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --text-dim: #505060;
+
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-glow: 0 0 10px rgba(0, 243, 255, 0.2);
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.08);
+  --glass-blur: blur(12px);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+  /* Fontlar */
+  --font-main: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+  --font-mono: 'Fira Code', 'Courier New', monospace;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-main);
+  overflow: hidden; /* Tam ekran uygulama hissi */
+  height: 100vh;
+  width: 100vw;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Glassmorphism Panel Sınıfı */
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  border-radius: 12px;
+}
+
+/* Scrollbar Özelleştirme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00d0dd;
+}
+
+/* Yardımcı Sınıflar */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-glow {
+  text-shadow: 0 0 10px var(--primary-color);
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+}
