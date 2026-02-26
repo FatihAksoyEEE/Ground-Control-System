@@ -1,16 +1,40 @@
-# React + Vite
+# 📡 Ground Control System (GCS)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, İHA (İnsansız Hava Aracı) ve drone sistemleri için geliştirilmiş profesyonel bir **Yer Kontrol İstasyonu** arayüzüdür. Uçuş sırasında hava aracından gelen telemetri verilerini anlık olarak görselleştirir ve operatöre aracı uzaktan yönetme imkanı sunar.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Temel Yetenekler
 
-## React Compiler
+- 📊 **Anlık Telemetri:** İrtifa, hız, batarya durumu ve yön (heading) verilerini gerçek zamanlı grafiklerle izleyin.
+- 🗺️ **Canlı Harita Takibi:** Aracın GPS koordinatlarını harita üzerinde anlık olarak takip edin.
+- ⚙️ **Parametre Yapılandırma:** Uçuş kontrolcüsü üzerindeki PID katsayılarını ve kalibrasyon ayarlarını uzaktan güncelleyin.
+- 🚨 **Hata & Uyarı Sistemi:** Kritik batarya seviyesi veya sinyal kaybı gibi durumlarda görsel ve sesli uyarılar.
+- 📡 **Veri Kaydı (Logging):** Uçuş verilerini daha sonra analiz etmek üzere yerel veritabanına kaydedin.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Teknik Altyapı
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+GCS, düşük gecikme ve yüksek veri tutarlılığı sağlamak üzere tasarlanmıştır:
+
+- **Frontend:** JavaScript / React (Dinamik dashboard yapısı).
+- **Haberleşme:** Serial Port (UART), WebSocket veya UDP üzerinden veri akışı.
+- **Veri Formatı:** MAVLink veya özel protokol paketleri.
+- **Grafik Kütüphaneleri:** Chart.js / D3.js (Performanslı veri görselleştirme).
+
+---
+
+## 🔌 Bağlantı Mimarisi
+
+GCS, hava aracındaki telsiz modülü (LoRa, NRF24L01 veya Wi-Fi) aracılığıyla gelen verileri işler:
+
+
+
+---
+
+## 💻 Kurulum ve Kullanım
+
+1. Depoyu klonlayın:
+   ```bash
+   git clone [https://github.com/FatihAksoyEEE/Ground-Control-System.git](https://github.com/FatihAksoyEEE/Ground-Control-System.git)
